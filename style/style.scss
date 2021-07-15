@@ -374,7 +374,7 @@ footer{
 
 .socialmedia{
     width: max-content;
-
+    margin-left: -10px;
 }
 
 .socialmedia img{
@@ -397,6 +397,10 @@ footer{
     color: #060A24;
     letter-spacing: 0;
     line-height: 28px;
+}
+.socialmedia i{
+    margin-left: 30px;
+    font-size: 23px;
 }
 
 @media screen and (max-width: 800px){
@@ -422,6 +426,8 @@ footer{
 
     .icon-menu{
         margin-top: 10px;
+        width: 24px;
+        margin-right: 19px;
     }
 
     .menu ul{
@@ -512,7 +518,7 @@ footer{
     }
 
     .container div iframe{
-        width: 300px;
+        width: 260px;
     }
 
     .phone-container{
@@ -530,7 +536,6 @@ footer{
 
       }
         #phone {
-        margin-left: 7%;
         width: auto;
         height: 519px;
         
@@ -570,6 +575,7 @@ footer{
             margin-top: 27px;
             height: max-content;
             margin-bottom: 54px;
+            margin-left: 5%;
         }
     
     .invitados{
@@ -593,14 +599,14 @@ footer{
         margin-top: 10px;
         grid-column: auto;
         grid-template-columns: 100%;
-        grid-template-rows: 280px 280px 280px 280px 280px;
-        gap: 0px 0px;
+        grid-template-rows: 242px 242px 242px 242px 242px;
+        gap: 0px;
         }
         .container-img div{
             height: max-content;
         }
         .container-img img{
-            width: 375px;
+            width: 320px;
         }
         .button-escucha{
             margin-left: 22%;
@@ -658,16 +664,21 @@ footer{
             height: 48px;
             margin-left: 16px;
         }
-
+        
         .footer-grid{
-            margin-left: 20px;
             grid-column: auto;
             grid-template-columns: max-content;
             grid-template-rows: 50% 50%;
             gap: 10px;
         }
-        
+
         .socialmedia{
-            margin-left: 20px;
+            margin-bottom: auto;
+            margin-left: 5%;
         }
+        .socialmedia i{
+            margin-left: 30px;
+            font-size: 23px;
+        }
+
 }
