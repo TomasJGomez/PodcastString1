@@ -175,9 +175,13 @@ h1{
     margin-left: $margin-con;
     border: $border-test;
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 540px 540px;
     grid-template-rows: 232px 232px;
     gap: 72px;
+}
+
+.spotifyinframe{
+
 }
 
 .content{

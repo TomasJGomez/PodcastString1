@@ -178,8 +178,8 @@ h1 {
   border: s;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 45% 45%;
-      grid-template-columns: 45% 45%;
+  -ms-grid-columns: 540px 540px;
+      grid-template-columns: 540px 540px;
   -ms-grid-rows: 232px 232px;
       grid-template-rows: 232px 232px;
   gap: 72px;
