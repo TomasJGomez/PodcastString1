@@ -16,10 +16,6 @@ header {
   left: 0;
 }
 
-#btn-menu {
-  display: none;
-}
-
 header label {
   display: none;
   width: 60px;
@@ -52,6 +48,10 @@ body {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+#abrir-cerrar {
+  display: none;
 }
 
 #logo {
@@ -301,7 +301,6 @@ h1 {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin-left: 20%;
   margin-top: 64px;
 }
 
@@ -310,6 +309,7 @@ h1 {
   font-size: 48px;
   color: #060A24;
   letter-spacing: 0;
+  margin-left: 200px;
 }
 
 .grid-themes {
@@ -447,41 +447,122 @@ footer {
   }
   .menu {
     position: absolute;
-    width: 100%;
-    height: 224px;
+    width: 320px;
+    height: 190px;
     margin-top: -90%;
+    padding-left: 0;
+    padding-right: 0;
     -webkit-transition: all 500ms;
     transition: all 500ms;
     background-color: #0000EC;
-  }
-  .icon-menu {
-    margin-top: 10px;
-    width: 24px;
-    margin-right: 19px;
   }
   .menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: -25px;
+    width: 320px;
   }
   .menu ul li a {
     margin-top: 20px;
     background-color: #0000EC;
     color: white;
+    width: 300px;
   }
   li a:hover {
     color: #00F3BB;
     text-decoration: line-through;
   }
-  #btn-menu:checked ~ .menu {
-    background-color: #0000EC;
-    margin: 0px;
-    margin-top: 70px;
-    padding: 0;
+  input#abrir-cerrar {
+    visibility: hidden;
+    position: absolute;
+    top: -9999px;
+  }
+  .toggle-button {
+    display: block;
+    width: 28px;
+    height: 16px;
+    margin-top: 17px;
+    margin-right: 26px;
+    margin-bottom: 14px;
+    position: relative;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .toggle-button:before, .toggle-button:after {
+    position: absolute;
+    display: block;
+    content: " ";
+    width: calc(100% / 6);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    left: calc(100% / 4);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .toggle-button:before {
+    top: calc(100% / 6);
+    height: calc(100% / 4);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 3px;
+    width: 18px;
+    background-color: transparent;
+  }
+  .toggle-button:after {
+    height: 2px;
+    width: 18px;
+    background-color: black;
+    bottom: calc(100% / 4);
+  }
+  input#abrir-cerrar:checked + .toggle-button:before, input#abrir-cerrar:checked + .toggle-button:after {
+    top: calc(100% / 2);
+    height: 2px;
+    width: 18px;
+    border-bottom: 0;
+  }
+  input#abrir-cerrar:checked + .toggle-button:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  input#abrir-cerrar:checked + .toggle-button:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .abrir, .cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: -9999px;
+  }
+  .abrir {
+    display: block;
+  }
+  .cerrar {
+    display: none;
+  }
+  input#abrir-cerrar:checked + .toggle-button .abrir {
+    display: none;
+  }
+  input#abrir-cerrar:checked + .toggle-button .cerrar {
+    display: block;
+  }
+  #abrir-cerrar:checked ~ .menu {
+    margin-top: 50px;
+  }
+  #abrir-cerrar:checked ~ .menu ul li {
+    display: block;
   }
   #logo {
-    margin-right: 100px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    margin-left: 19px;
+    margin-top: 16px;
   }
   .principal {
     padding-top: 20px;
@@ -560,7 +641,7 @@ footer {
     gap: 0px 0px;
   }
   .div-phone {
-    width: 380px;
+    width: 320px;
     height: 519px;
   }
   #phone {
@@ -568,9 +649,10 @@ footer {
     height: 519px;
   }
   .text-subtitle {
-    width: 400px;
+    width: 200px;
     height: 62px;
     grid-area: text-subtitle;
+    margin: 0;
   }
   #text-phone {
     width: 200px;
@@ -702,6 +784,10 @@ footer {
     -ms-grid-rows: 50% 50%;
         grid-template-rows: 50% 50%;
     gap: 10px;
+    width: 320px;
+  }
+  footer {
+    width: 320px;
   }
   .socialmedia {
     margin-bottom: auto;
